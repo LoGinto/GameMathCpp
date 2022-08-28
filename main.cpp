@@ -4,8 +4,7 @@ using namespace std;
 
 int main()
 {
-    Vector3 vectorZero(0,0,0);
-    Vector3 vectorOne(1,1,1);
-    Vector3 sumOfZeroAndOne = vectorZero+vectorOne;
-    sumOfZeroAndOne.PrintVectorValues();
+    Vector3 testingTheScale(3,4,5);
+    Vector3 normalized = testingTheScale.Normalized();
+    std::cout<<"Normalized testing vector "<<normalized.Length();
 }
