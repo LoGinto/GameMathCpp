@@ -27,6 +27,7 @@ float Vector3::LengthSquare() const{
     _length = x*x+y*y+z*z;//used when comparing the distance
     return _length;
 }
+
 Vector3 Vector3::operator+ (const Vector3& anotherVector) const
 {
       Vector3 result(0,0,0);
@@ -59,12 +60,16 @@ Vector3 Vector3::operator/ (float s) const
      scaled.z = z/s;
      return scaled;
 }
+
 Vector3 Vector3::Normalized() const{
     Vector3 normalizedVector;
     normalizedVector = (*this)/Length();
     return normalizedVector;
 }
-
+float Vector3::Dot(const Vector3 & a, const Vector3 & b){
+    float dotProduct = a.x*b.x+a.y*b.y+a.z*b.z;
+    return dotProduct;
+}
 
 void Vector3::PrintVectorValues(){
    std::cout<<x<<" "<<y<<" "<<z<<std::endl;

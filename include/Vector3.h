@@ -10,11 +10,13 @@ class Vector3
         Vector3();
         Vector3 Normalized() const;
         virtual ~Vector3();
+        float Length() const;
         Vector3 operator+(const Vector3 & f) const;
         Vector3 operator-(const Vector3 & f) const;
         Vector3 operator*(float s) const;
         Vector3 operator/(float s) const;
-        float Length() const;
+        static float Dot(const Vector3 & a, const Vector3 & b);
+        //float Dot(const Vector3& a,const Vector3& b);
         void PrintVectorValues();
         float LengthSquare() const;
 

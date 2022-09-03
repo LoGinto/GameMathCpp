@@ -4,7 +4,9 @@ using namespace std;
 
 int main()
 {
-    Vector3 testingTheScale(3,4,5);
-    Vector3 normalized = testingTheScale.Normalized();
-    std::cout<<"Normalized testing vector "<<normalized.Length();
+    Vector3 one(4,5,6);
+    Vector3 twot(6,5,4);
+    Vector3 oneNormalized = one.Normalized();
+    Vector3 twoNormalized = twot.Normalized();
+    std::cout<<"dot product equals "<<Vector3::Dot(oneNormalized,twoNormalized);
 }
