@@ -68,7 +68,8 @@ Vector3 Vector3::Normalized() const{
 }
 float Vector3::Dot(const Vector3 & a, const Vector3 & b){
     float dotProduct = a.x*b.x+a.y*b.y+a.z*b.z;
-    return dotProduct;
+    return dotProduct; //use it only on normalized vectors
+    //if dot product will be less than -0.5 then you can assume the backstabbing
 }
 
 void Vector3::PrintVectorValues(){
